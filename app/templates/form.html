@@ -1,18 +1,19 @@
-<!-- templates/form.html -->
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>FastAPI Form Example</title>
-  </head>
-  <body>
-    <h1>Prompt a Model</h1>
+<head>
+    <title>EV Recommendation Chatbot</title>
+</head>
+<body>
+    <h1>EV Advisor Chatbot</h1>
     <form method="post">
-      <label for="prompt">Enter a prompt:</label>
-      <input type="text" id="prompt" name="prompt" required />
-      <button type="submit">Submit</button>
+        <label for="prompt">Enter your preferences or queries:</label><br>
+        <textarea id="prompt" name="prompt" rows="4" cols="50" placeholder="E.g., 'I need an EV with a range of at least 300 miles'"></textarea><br><br>
+        <input type="submit" value="Submit">
     </form>
     {% if response %}
-    <h2>Response:</h2>
-    <p>{{ response }}</p>
+        <h2>Recommendation:</h2>
+        <p>{{ response }}</p>
     {% endif %}
-  </body>
+</body>
 </html>
+
